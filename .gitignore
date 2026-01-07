@@ -1,0 +1,13 @@
+# Ignore scratch / experiments
+misc/
+
+# Python noise
+__pycache__/
+*.pyc
+
+# Editor noise
+.vscode/
+.idea/
+
+# OS noise
+.DS_Store

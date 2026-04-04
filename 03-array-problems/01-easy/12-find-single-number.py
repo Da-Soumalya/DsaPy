@@ -6,10 +6,10 @@ twice except for one. Find that single one.
 
 class Solution():
     def only_single_number(self, arr):
-        new_arr = sorted(arr) # to avoid the n^n bruteforce
-        for i in range(1, len(new_arr)-1):
-            if new_arr[i] != new_arr[i+1] and new_arr[i] != new_arr[i-1]:
-                return new_arr[i]
+        result = 0
+        for num in arr:
+            result ^= num
+        return result
 
 
 def main():
@@ -23,4 +23,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# this logic fails if the input was [1, 1, 2]
+
+# this problem extends to bit manipulation, if every elements occured thrice instead of twice.
